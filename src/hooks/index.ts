@@ -6,3 +6,5 @@ export { useScroll } from './useScroll';
 export { useLoadingState } from './useLoadingState';
 export { useLocalStorage } from './useLocalStorage';
 export { useSessionStorage } from './useSessionStorage';
+export { useResizeElement } from './useResizeElement';
+export { useResizeWindow } from './useResizeWindow';
