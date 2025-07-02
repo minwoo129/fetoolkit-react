@@ -22,7 +22,7 @@ export function useToggle(
 
   const handleToggleValue = useCallback(() => {
     setValue((prevValue) => !prevValue);
-  }, [setValue]);
+  }, []);
 
   return useMemo(() => [value, handleToggleValue], [value, handleToggleValue]);
 }
