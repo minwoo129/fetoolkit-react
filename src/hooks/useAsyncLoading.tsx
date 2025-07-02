@@ -2,15 +2,15 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 /**
- * ======================= useLoadingState Hook =======================
+ * ======================= useAsyncLoading Hook =======================
  * - Description
  *   - 비동기 작업의 로딩 상태를 관리하기 위한 커스텀 훅입니다.
  *   - Promise를 인자로 받아 로딩 상태와 Promise 결과를 반환합니다.
  * - 사용 예시
  *   ```tsx
- *    import { useLoadingState } from '@fetoolkit/react/hooks';
+ *    import { useAsyncLoading } from '@fetoolkit/react/hooks';
  *    ...
- *    const [isLoading, startTransition] = useLoadingState();
+ *    const [isLoading, startTransition] = useAsyncLoading();
  *    ...
  *    const fetchData = async () => {
  *      try {
@@ -22,7 +22,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
  *    };
  *   ```
  */
-export function useLoadingState(): [
+export function useAsyncLoading(): [
   boolean,
   <T>(promiseReq: Promise<T>) => Promise<T>,
 ] {

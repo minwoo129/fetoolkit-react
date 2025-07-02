@@ -3,7 +3,7 @@ export { useToggle } from './useToggle';
 export { useCountdown } from './useCountdown';
 export { useImageLazyLoading } from './useImageLazyLoading';
 export { useScroll } from './useScroll';
-export { useLoadingState } from './useLoadingState';
+export { useAsyncLoading } from './useAsyncLoading';
 export { useLocalStorage } from './useLocalStorage';
 export { useSessionStorage } from './useSessionStorage';
 export { useResizeElement } from './useResizeElement';
