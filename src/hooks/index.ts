@@ -4,3 +4,5 @@ export { useCountdown } from './useCountdown';
 export { useImageLazyLoading } from './useImageLazyLoading';
 export { useScroll } from './useScroll';
 export { useLoadingState } from './useLoadingState';
+export { useLocalStorage } from './useLocalStorage';
+export { useSessionStorage } from './useSessionStorage';
