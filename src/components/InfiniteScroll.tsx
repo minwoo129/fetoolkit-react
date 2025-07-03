@@ -6,21 +6,22 @@ import { throttle } from 'throttle-debounce';
 import { ThresholdUnits, parseThreshold } from '../utils/threshold';
 
 type Fn = () => void;
-export interface Props {
+interface Props {
   /**
    * 스크롤 영역 하단에 도달했을 때 호출하는 이벤트
    * - 페이징을 위한 데이터 fetching에 사용
    */
-  onEndReached: Fn;
+  onEndReached?: Fn;
   /**
    * 스크롤 영역 하단에 도달했을 때 ```onEndReached``` 이벤트를 호출할지 여부 결정
+   * - default: false
    */
-  hasMore: boolean;
+  hasMore?: boolean;
   children: ReactNode;
   /**
    * 다음 데이터를 fetching하는 동안 보여줄 fallback UI 컴포넌트
    */
-  loader: ReactNode;
+  loader?: ReactNode;
   /**
    * InfiniteScroll이 다음에 호출할 시점을 정의하는 임계값
    * - default: 0.8
@@ -382,10 +383,10 @@ export default class InfiniteScroll extends Component<Props, State> {
       : this.isElementAtBottom(target, this.props.scrollThreshold);
 
     // call the `next` function in the props to trigger the next data fetch
-    if (atBottom && this.props.hasMore) {
+    if (atBottom && (this.props.hasMore ?? false)) {
       this.actionTriggered = true;
       this.setState({ showLoader: true });
-      this.props.onEndReached && this.props.onEndReached();
+      this.props.onEndReached?.();
     }
 
     this.lastScrollTop = target.scrollTop;
@@ -448,10 +449,12 @@ export default class InfiniteScroll extends Component<Props, State> {
           {this.props.children}
           {!this.state.showLoader &&
             !hasChildren &&
-            this.props.hasMore &&
+            (this.props.hasMore ?? false) &&
             this.props.loader}
-          {this.state.showLoader && this.props.hasMore && this.props.loader}
-          {!this.props.hasMore && this.props.endMessage}
+          {this.state.showLoader &&
+            (this.props.hasMore ?? false) &&
+            this.props.loader}
+          {!(this.props.hasMore ?? false) && this.props.endMessage}
         </div>
       </div>
     );
