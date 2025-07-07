@@ -1,12 +1,29 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import reactLogo from './assets/react.svg';
+import { getUserAgent } from './utils/userAgent';
+import viteLogo from '/vite.svg';
 
 function App() {
   const [count, setCount] = useState(0);
 
   // const test = 'abc';
+
+  useEffect(() => {
+    userAgentDataTest();
+  }, []);
+
+  const userAgentDataTest = async () => {
+    const { userAgentData } = navigator;
+    if (!userAgentData) return;
+    console.log('userAgentData: ', userAgentData);
+    try {
+      const agent = await getUserAgent();
+      console.log('userAgentDataTest agent: ', agent);
+    } catch (e) {
+      console.log('userAgentDataTest error: ', e);
+    }
+  };
 
   return (
     <>
