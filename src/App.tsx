@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import reactLogo from './assets/react.svg';
-import { getUserAgent } from './utils/userAgent';
+import useUserAgent from './hooks/useUserAgent';
 import viteLogo from '/vite.svg';
 
 function App() {
   const [count, setCount] = useState(0);
+  const { agent, browser, isMobile, os } = useUserAgent();
 
-  // const test = 'abc';
-
-  useEffect(() => {
-    userAgentDataTest();
-  }, []);
-
-  const userAgentDataTest = async () => {
-    const { userAgentData } = navigator;
-    if (!userAgentData) return;
-    console.log('userAgentData: ', userAgentData);
-    try {
-      const agent = await getUserAgent();
-      console.log('userAgentDataTest agent: ', agent);
-    } catch (e) {
-      console.log('userAgentDataTest error: ', e);
-    }
-  };
+  console.log('agent: ', agent);
+  console.log('browser: ', browser);
+  console.log('isMobile: ', isMobile);
+  console.log('os: ', os);
 
   return (
     <>
