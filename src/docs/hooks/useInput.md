@@ -20,7 +20,7 @@ import { useInput } from '@fetoolkit/react/hooks';
   ```typescript
   [ value: T, handleValueChange: function ]
   ```
-  | Name            | Type               | Description                   |
-  | --------------- | ------------------ | ----------------------------- |
-  | value           | T                  | 현재 입력 후 저장된 값        |
-  | handleCountdown | (value: T) => void | 입력값을 저장하기 위한 메서드 |
+  | Name              | Type               | Description                   |
+  | ----------------- | ------------------ | ----------------------------- |
+  | value             | T                  | 현재 입력 후 저장된 값        |
+  | handleValueChange | (value: T) => void | 입력값을 저장하기 위한 메서드 |
