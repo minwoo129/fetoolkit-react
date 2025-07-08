@@ -81,7 +81,7 @@ createRoot(document.getElementById('root')!).render(
 | useResizeElement    | 특정 HTML 요소의 크기를 추적하기 위한 Hook                                                   | ✅ React <br> ❌ Next.js |  [공식문서](./src/docs/hooks/useResizeElement.md)   |
 | useResizeWindow     | 브라우저 창의 크기를 추적하기 위한 Hook                                                      | ✅ React <br> ❌ Next.js |   [공식문서](./src/docs/hooks/useResizeWindow.md)   |
 | useScroll           | 스크롤 위치를 추적하고, 스크롤을 최상단으로 이동시키는<br> 기능을 제공하는 Hook              | ✅ React <br> ❌ Next.js |      [공식문서](./src/docs/hooks/useScroll.md)      |
-| useSessionStorage   | SessionStorage 사용을 위한 Hook                                                              | ✅ React <br> ❌ Next.js |                      공식문서                       |
+| useSessionStorage   | SessionStorage 사용을 위한 Hook                                                              | ✅ React <br> ❌ Next.js |  [공식문서](./src/docs/hooks/useSessionStorage.md)  |
 | useToggle           | 토글 형태의 input 값 제어를 위한 Hook                                                        | ✅ React <br> ❌ Next.js |                      공식문서                       |
 | useUserAgent        | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 Hook | ✅ React <br> ❌ Next.js |                      공식문서                       |
 
