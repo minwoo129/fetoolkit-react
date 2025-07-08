@@ -76,7 +76,7 @@ createRoot(document.getElementById('root')!).render(
 | useAsyncLoading     | 비동기 작업의 로딩 상태를 관리하기 위한 Hook                                                 | ✅ React <br> ❌ Next.js |   [공식문서](./src/docs/hooks/useAsyncLoading.md)   |
 | useCountdown        | 카운트다운 기능을 구현하기 위한 Hook                                                         | ✅ React <br> ❌ Next.js |    [공식문서](./src/docs/hooks/useCountdown.md)     |
 | useImageLazyLoading | 이미지의 lazy loading을 구현하기 위한 Hook                                                   | ✅ React <br> ❌ Next.js | [공식문서](./src/docs/hooks/useImageLazyLoading.md) |
-| useInput            | input 컴포넌트에서의 입력값을 관리하기 위한 Hook                                             | ✅ React <br> ❌ Next.js |                      공식문서                       |
+| useInput            | input 컴포넌트에서의 입력값을 관리하기 위한 Hook                                             | ✅ React <br> ❌ Next.js |      [공식문서](./src/docs/hooks/useInput.md)       |
 | useLocalStorage     | LocalStorage 사용을 위한 Hook                                                                | ✅ React <br> ❌ Next.js |                      공식문서                       |
 | useResizeElement    | 특정 HTML 요소의 크기를 추적하기 위한 Hook                                                   | ✅ React <br> ❌ Next.js |                      공식문서                       |
 | useResizeWindow     | 브라우저 창의 크기를 추적하기 위한 Hook                                                      | ✅ React <br> ❌ Next.js |                      공식문서                       |
