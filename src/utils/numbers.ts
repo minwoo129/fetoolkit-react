@@ -1,4 +1,4 @@
-export const formatPhoneNumber = (phoneNumber: string) => {
+const formatPhoneNumber = (phoneNumber: string) => {
   // 지역번호가 두자리로 시작하는 경우(서울(02)밖에 없음)
   const isSeoulNumber = phoneNumber.startsWith('02');
 
@@ -12,4 +12,25 @@ export const formatPhoneNumber = (phoneNumber: string) => {
     phoneNumber.slice(secondSplitIndex, phoneNumber.length - 4),
     phoneNumber.slice(phoneNumber.length - 4),
   ].join('-');
+};
+
+const commaizeNumber = (value: string | number) => {
+  const numStr = String(value);
+  const decimalPointIndex = numStr.indexOf('.');
+  const commaizeRegExp = /(\d)(?=(\d\d\d)+(?!\d))/g;
+
+  return decimalPointIndex > -1
+    ? numStr.slice(0, decimalPointIndex).replace(commaizeRegExp, '$1,') +
+        numStr.slice(decimalPointIndex)
+    : numStr.replace(commaizeRegExp, '$1,');
+};
+
+const decommaizeNumber = (numStr: string) => {
+  return Number(numStr.replace(/,/g, ''));
+};
+
+export const Numbers = {
+  formatPhoneNumber,
+  commaizeNumber,
+  decommaizeNumber,
 };

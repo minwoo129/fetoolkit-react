@@ -55,12 +55,14 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 #### 2-3. 유틸리티 함수
 
-| 이름              | 설명                                                                                         | 호환여부                 | 공식문서 |
-| :---------------- | :------------------------------------------------------------------------------------------- | :----------------------- | :------: |
-| getUserAgent      | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 함수 | ✅ React <br> ❌ Next.js | 공식문서 |
-| formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 반환하는 함수                                           | ✅ React <br> ❌ Next.js | 공식문서 |
-| maskName          | 이름 마스킹 처리 함수                                                                        | ✅ React <br> ❌ Next.js | 공식문서 |
-| maskPhoneNumber   | 전화번호 마스킹 처리 함수                                                                    | ✅ React <br> ❌ Next.js | 공식문서 |
-| at(array)         | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)         | ✅ React <br> ❌ Next.js | 공식문서 |
-| first(array)      | 배열의 첫번째 요소를 꺼내오는 함수                                                           | ✅ React <br> ❌ Next.js | 공식문서 |
-| last(array)       | 배열의 마지막 요소를 꺼내오는 함수                                                           | ✅ React <br> ❌ Next.js | 공식문서 |
+| 이름                          | 설명                                                                                         | 호환여부                 | 공식문서 |
+| :---------------------------- | :------------------------------------------------------------------------------------------- | :----------------------- | :------: |
+| getUserAgent                  | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 함수 | ✅ React <br> ❌ Next.js | 공식문서 |
+| formatPhoneNumber<br>(number) | 전화번호를 하이픈(-)이 들어간 형태로 반환하는 함수                                           | ✅ React <br> ❌ Next.js | 공식문서 |
+| commaizeNumber<br>(number)    | 숫자 콤마 처리 함수                                                                          | ✅ React <br> ❌ Next.js | 공식문서 |
+| decommaizeNumber<br>(number)  | 콤마 처리가 들어간 숫자의 콤마 제거 함수                                                     | ✅ React <br> ❌ Next.js | 공식문서 |
+| maskName                      | 이름 마스킹 처리 함수                                                                        | ✅ React <br> ❌ Next.js | 공식문서 |
+| maskPhoneNumber               | 전화번호 마스킹 처리 함수                                                                    | ✅ React <br> ❌ Next.js | 공식문서 |
+| at<br>(array)                 | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)         | ✅ React <br> ❌ Next.js | 공식문서 |
+| first<br>(array)              | 배열의 첫번째 요소를 꺼내오는 함수                                                           | ✅ React <br> ❌ Next.js | 공식문서 |
+| last<br>(array)               | 배열의 마지막 요소를 꺼내오는 함수                                                           | ✅ React <br> ❌ Next.js | 공식문서 |
