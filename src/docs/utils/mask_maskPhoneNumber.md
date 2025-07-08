@@ -1,4 +1,4 @@
-# Mask(maskName)
+# Mask(maskPhoneNumber)
 
 - 전화번호를 마스킹 하는 함수입니다.
 
