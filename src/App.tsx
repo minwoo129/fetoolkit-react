@@ -5,6 +5,15 @@ import viteLogo from '/vite.svg';
 
 function App() {
   const [count, setCount] = useState(0);
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition((position) => {
+  //     console.log('position: ', position);
+  //   },
+  // (error) => {
+  //   error.
+  // }
+  // );
+  // }, []);
   return (
     <>
       <div>
