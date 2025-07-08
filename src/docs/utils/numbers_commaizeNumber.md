@@ -9,8 +9,8 @@ import { Numbers } from '@fetoolkit/react/utils';
 
 const { commaizeNumber } = Numbers;
 
-const num1 = commaizeNumber('13209802');
-const num2 = commaizeNumber(13209802);
+const num1 = commaizeNumber('13209802'); // 13,209,802
+const num2 = commaizeNumber(13209802); // 13,209,802
 ```
 
 ## API 문서

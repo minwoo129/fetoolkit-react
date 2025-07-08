@@ -9,7 +9,7 @@ import { Numbers } from '@fetoolkit/react/utils';
 
 const { decommaizeNumber } = Numbers;
 
-const num1 = decommaizeNumber('13,209,802');
+const num1 = decommaizeNumber('13,209,802'); // 13209802
 ```
 
 ## API 문서

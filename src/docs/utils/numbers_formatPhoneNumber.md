@@ -9,8 +9,8 @@ import { Numbers } from '@fetoolkit/react/utils';
 
 const { formatPhoneNumber } = Numbers;
 
-const num1 = formatPhoneNumber('01012345678');
-const num2 = formatPhoneNumber('021234567');
+const num1 = formatPhoneNumber('01012345678'); // 010-1234-5678
+const num2 = formatPhoneNumber('021234567'); // 02-123-4567
 ```
 
 ## API 문서
