@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 import reactLogo from './assets/react.svg';
-import useUserAgent from './hooks/useUserAgent';
 import viteLogo from '/vite.svg';
 
 function App() {
   const [count, setCount] = useState(0);
-  const { agent, browser, isMobile, os } = useUserAgent();
-
-  console.log('agent: ', agent);
-  console.log('browser: ', browser);
-  console.log('isMobile: ', isMobile);
-  console.log('os: ', os);
-
   return (
     <>
       <div>
