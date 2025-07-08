@@ -6,7 +6,7 @@ const isSeperatedByHyphen = (phoneNumber: string) => {
   return /^\d{2,3}-\d{3,4}-\d{4}$/.test(phoneNumber);
 };
 
-export const maskPhoneNumber = (phoneNumber: string) => {
+const maskPhoneNumber = (phoneNumber: string) => {
   if (isSeperatedByHyphen(phoneNumber)) {
     return phoneNumber.replace(
       /^(\d{2,3})-(\d{3,4})-(\d{4})/,
@@ -28,7 +28,7 @@ export const maskPhoneNumber = (phoneNumber: string) => {
   );
 };
 
-export const maskName = (name: string) => {
+const maskName = (name: string) => {
   const isKoreanName = /[가-힣]{2,}/.test(name);
 
   if (isKoreanName) {
@@ -51,4 +51,9 @@ const maskExceptForEdge = (text: string, edgeSize: number) => {
       .replace(/[a-zA-Z가-힣]/g, '*') +
     text.slice(text.length - edgeSize, text.length)
   );
+};
+
+export const Mask = {
+  maskPhoneNumber,
+  maskName,
 };

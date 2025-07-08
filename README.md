@@ -93,8 +93,8 @@ createRoot(document.getElementById('root')!).render(
 | formatPhoneNumber<br>(number) | 전화번호를 하이픈(-)이 들어간 형태로 반환하는 함수                                           | ✅ React <br> ❌ Next.js | [공식문서](./src/docs/utils/numbers_formatPhoneNumber.md) |
 | commaizeNumber<br>(number)    | 숫자 콤마 처리 함수                                                                          | ✅ React <br> ❌ Next.js |  [공식문서](./src/docs/utils/numbers_commaizeNumber.md)   |
 | decommaizeNumber<br>(number)  | 콤마 처리가 들어간 숫자의 콤마 제거 함수                                                     | ✅ React <br> ❌ Next.js | [공식문서](./src/docs/utils/numbers_decommaizeNumber.md)  |
-| maskName                      | 이름 마스킹 처리 함수                                                                        | ✅ React <br> ❌ Next.js |                         공식문서                          |
-| maskPhoneNumber               | 전화번호 마스킹 처리 함수                                                                    | ✅ React <br> ❌ Next.js |                         공식문서                          |
+| maskName<br>(mask)            | 이름 마스킹 처리 함수                                                                        | ✅ React <br> ❌ Next.js |                         공식문서                          |
+| maskPhoneNumber<br>(mask)     | 전화번호 마스킹 처리 함수                                                                    | ✅ React <br> ❌ Next.js |                         공식문서                          |
 | at<br>(array)                 | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)         | ✅ React <br> ❌ Next.js |                         공식문서                          |
 | first<br>(array)              | 배열의 첫번째 요소를 꺼내오는 함수                                                           | ✅ React <br> ❌ Next.js |                         공식문서                          |
 | last<br>(array)               | 배열의 마지막 요소를 꺼내오는 함수                                                           | ✅ React <br> ❌ Next.js |                         공식문서                          |

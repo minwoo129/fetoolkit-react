@@ -1,4 +1,4 @@
 export { Array } from './array';
-export { maskName, maskPhoneNumber } from './mask';
+export { Mask } from './mask';
 export { Numbers } from './numbers';
 export { getUserAgent } from './userAgent';
