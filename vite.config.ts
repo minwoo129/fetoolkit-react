@@ -10,8 +10,8 @@ export default defineConfig({
   plugins: [isDev ? react() : dts()],
   ...(isDev
     ? {
-        root: 'dev',
-        publicDir: 'dev/public',
+        root: './dev',
+        publicDir: './dev/public',
         server: {
           port: 5173,
         },
