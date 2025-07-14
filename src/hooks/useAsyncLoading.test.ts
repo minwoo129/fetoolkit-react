@@ -2,7 +2,7 @@ import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { useAsyncLoading } from './useAsyncLoading';
 
-describe('useAsyncLoading', () => {
+describe('hook > useAsyncLoading', () => {
   const mockedAPI = async () => ({ result: 'success' });
   it('초기 상태 확인', () => {
     const { result } = renderHook(() => useAsyncLoading());
