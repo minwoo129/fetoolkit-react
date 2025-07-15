@@ -4,15 +4,15 @@
 - 음수 인덱스도 지원합니다.
 
 ```tsx
-Array.at(array, at);
+ArrayUtils.at(array, at);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { Array } from '@fetoolkit/react/utils';
+import { ArrayUtils } from '@fetoolkit/react';
 
-const { at } = Array;
+const { at } = ArrayUtils;
 
 const testArr = [1, 23, 578, 456, 1234];
 const num1 = at(testArr, 3); // 578

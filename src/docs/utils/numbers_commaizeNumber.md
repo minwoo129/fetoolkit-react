@@ -5,9 +5,9 @@
 ## 기본 사용 예시
 
 ```tsx
-import { Numbers } from '@fetoolkit/react/utils';
+import { NumbersUtils } from '@fetoolkit/react';
 
-const { commaizeNumber } = Numbers;
+const { commaizeNumber } = NumbersUtils;
 
 const num1 = commaizeNumber('13209802'); // 13,209,802
 const num2 = commaizeNumber(13209802); // 13,209,802

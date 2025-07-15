@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useSessionStorage } from '@fetoolkit/react/hooks';
+import { useSessionStorage } from '@fetoolkit/react';
 ...
 const [get, set, remove, clear] = useSessionStorage();
 ```

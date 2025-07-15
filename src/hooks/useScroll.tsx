@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from 'react';
 import type { RefObject } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 type ScrollPosition = {
   /** 수직 스크롤 기준 현재 위치 */
@@ -23,7 +23,7 @@ type UseScrollPositionReturn = ScrollPosition & {
  *  - Hook의 인자로 HTMLElement의 Ref를 받아 해당 요소의 스크롤 위치와 스크롤을 최상단으로 이동시키는 메서드를 반환합니다.
  * - 사용 예시
  *    ```tsx
- *    import { useScroll } from '@fetoolkit/react/hooks';
+ *    import { useScroll } from '@fetoolkit/react';
  *    ...
  *    const elementRef = useRef<HTMLDivElement>(null);
  *    const { scrollY, scrollX, scrollToTop } = useScroll(elementRef);

@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useUserAgent } from '@fetoolkit/react/hooks'
+import { useUserAgent } from '@fetoolkit/react'
 ...
 const {agent, browser, os, isMobile} = useUserAgent()
 ```

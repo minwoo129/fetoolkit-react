@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useScroll } from '@fetoolkit/react/hooks';
+import { useScroll } from '@fetoolkit/react';
 ...
 const elementRef = useRef<HTMLDivElement>(null);
 const { scrollY, scrollX, scrollToTop } = useScroll(elementRef);

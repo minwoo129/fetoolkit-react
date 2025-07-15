@@ -8,7 +8,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
  *   - 이미지 태그의 ref와 실제 src를 튜플형태로 반환합니다.
  * - 사용 예시
  *   ```tsx
- *    import { useImageLazyLoading } from '@fetoolkit/react/hooks';
+ *    import { useImageLazyLoading } from '@fetoolkit/react';
  *    ...
  *    const [imgRef, realSrc] = useImageLazyLoading({ src: 'image url' });
  *    ...

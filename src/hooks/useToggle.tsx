@@ -9,7 +9,7 @@ import { useCallback, useMemo, useState } from 'react';
  *    - Hook 초기화시 원하시는 초기값을 설정할 수 있습니다
  * - 사용 예시
  *     ```tsx
- *      import { useToggle } from '@fetoolkit/react/hooks';
+ *      import { useToggle } from '@fetoolkit/react';
  *      ...
  *      const [isActive, toggleActive] = useToggle(); // 초기값은 false입니다.
  *      const [isActive2, toggleActive2] = useToggle(a === b); // 초기값이 지정된 경우

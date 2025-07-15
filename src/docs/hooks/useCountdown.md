@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useCountdown } from '@fetoolkit/react/hooks'
+import { useCountdown } from '@fetoolkit/react'
 ...
 const {leftTime, isCountdownRunning, handleCountdown} = useCountdown({min: 3})
 ```

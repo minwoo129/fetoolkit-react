@@ -5,9 +5,9 @@
 ## 기본 사용 예시
 
 ```tsx
-import { Mask } from '@fetoolkit/react/utils';
+import { MaskUtils } from '@fetoolkit/react';
 
-const { maskPhoneNumber } = Mask;
+const { maskPhoneNumber } = MaskUtils;
 
 const name1 = maskPhoneNumber('010-1234-5678'); // 010-****-5678
 const name2 = maskPhoneNumber('01012345678'); // 010****5678
