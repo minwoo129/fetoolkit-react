@@ -3,15 +3,15 @@
 - Array 내에 마지막 요소를 반환합니다.
 
 ```tsx
-Array.last(array);
+ArrayUtils.last(array);
 ```
 
 ## 기본 사용 예시
 
 ```tsx
-import { Array } from '@fetoolkit/react';
+import { ArrayUtils } from '@fetoolkit/react';
 
-const { last } = Array;
+const { last } = ArrayUtils;
 
 const testArr = [1, 23, 578, 456, 1234];
 const num1 = last(testArr); // 1234

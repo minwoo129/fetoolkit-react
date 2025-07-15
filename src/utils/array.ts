@@ -26,7 +26,7 @@ const last = <T>(array: T[]) => {
   return array[array.length - 1];
 };
 
-export const Array = {
+export const ArrayUtils = {
   at,
   first,
   last,
