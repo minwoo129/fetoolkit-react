@@ -1,6 +1,6 @@
 {
   "name": "@fetoolkit/react",
-  "private": true,
+  "private": false,
   "version": "1.0.0-beta.1",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -8,11 +8,7 @@
   "module": "./dist/index.js",
   "homepage": "https://github.com/minwoo129/fetoolkit-react",
   "license": "MIT",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js"
-    }
-  },
+  "exports": "./dist/index.js",
   "keywords": [
     "react",
     "fetoolkit"
