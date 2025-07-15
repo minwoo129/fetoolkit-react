@@ -1,30 +1,27 @@
 # FEToolkit
 
-FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
-현재는 제공되고 있는 기능이 많이 없을지 몰라도 지속적인 업데이트를 통해 기능을 추가해나갈 예정입니다.
+FEToolkit is toolkit library that provide useful features at frontend development. it is provided seperately acording to frameworks such as React, Vue, Next.js, and features that can be used in common regardless of framework will be distributed as seperate libraries.
 
 ## Documentation
 
-## 사용 가능 환경
+## Available Environments
 
-|                       프레임워크 및 라이브러리                       | 사용 가능 여부 | 사용 가능 버전 | 비고                         |
-| :------------------------------------------------------------------: | :------------: | :------------: | ---------------------------- |
-|      ![React](https://api.iconify.design/logos:react.svg) React      |  ✅ 사용 가능  | React 19 이상  |                              |
-| ![Next.js](https://api.iconify.design/logos:nextjs-icon.svg) Next.js |   사용 제한    | React 19 이상  | 기능 동작을 위한 테스트 필요 |
-|  ![React](https://api.iconify.design/logos:react.svg) React Native   |  ❌ 사용 불가  |                |                              |
+|                              Frameworks                              |    enabled     |  required   | Notes                     |
+| :------------------------------------------------------------------: | :------------: | :---------: | ------------------------- |
+|      ![React](https://api.iconify.design/logos:react.svg) React      |   ✅ Enabled   | >= React 19 |                           |
+| ![Next.js](https://api.iconify.design/logos:nextjs-icon.svg) Next.js |   Restricted   | >= React 19 | additional tests required |
+|  ![React](https://api.iconify.design/logos:react.svg) React Native   | ❌ Unavailable |             |                           |
 
-> ### 참고
+> ### References
 >
-> - 본 라이브러리는 React 전용 라이브러리입니다.
->   - React Native의 경우 사용이 불가능합니다.
-> - 이 패키지는 React 19 이상에서만 정상동작이 가능합니다.
-> - Next.JS의 경우 작동 여부에 대해 추가 테스트가 필요한 상황이라 사용하지 마시기 바랍니다.
->   - 일부 기능의 경우 코드상으로는 정상 동작이 가능할 수 있어도, 동작이 불안정할 수 있습니다.
->   - 최대한 빨리 테스트 진행 후 Next.JS에서 사용이 가능한 기능들을 정리하도록 하겠습니다.
+> - This library is React Only
+>   - It's not supported in React Native
+> - Project Environment of at least React 19 Required!!
+> - Don't use this library in Next.js Project(It needs additional Test)
 
-## 초기 설정 절차
+## Getting Started
 
-### 1. 설치 방법
+### 1. Installation
 
 - npm
   ```
@@ -39,10 +36,10 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
   pnpm add @fetoolkit/react
   ```
 
-### 2. Provider 연결
+### 2. Connect Provider Component
 
-이 툴킷의 안정적인 기능사용을 위해선, 최상단에 FEToolkitProvider 컴포넌트 연결이 필요합니다.  
-(Next.js의 경우 일부 기능 제한이 있어 연결하지 않아도 됩니다.)
+In order to using of this toolkit, Connecting of FEToolkitProvider Component is Required in Root.  
+(in Next.js, there's some of feature restricted, so you can skip this step.)
 
 ```tsx
 import React, { StrictMode } from 'react';
@@ -60,13 +57,13 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-## 3. 제공되는 기능
+## 3. Features
 
-### 3-1. 컴포넌트
+### 3-1. Components
 
 | 이름           | 설명                                                                                                                                              | 호환여부                 |                      공식문서                       |
 | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------- | :-------------------------------------------------: |
-| ErrorBoundary  | React 기본 탑재 기능인 ErrorBoundary를 함수 컴포넌트 및<br> HOC 형태로 제공하는 컴포넌트                                                          | ✅ React <br> ❌ Next.js | [공식문서](./src/docs/components/ErrorBoundary.md)  |
+| ErrorBoundary  | React Error Boundary Component <br>(with HOC Component)                                                                                           | ✅ React <br> ❌ Next.js | [공식문서](./src/docs/components/ErrorBoundary.md)  |
 | Flatlist       | 많은 양의 스크롤이 필요한 리스트 아이템을 보여주고자 할 때<br> 사용할 수 있는 컴포넌트 <br> (참고: React Native 개발자라면 이해할 수 있을겁니다!) | ✅ React <br> ❌ Next.js |    [공식문서](./src/docs/components/Flatlist.md)    |
 | InfiniteScroll | 무한 스크롤 기능 컴포넌트                                                                                                                         | ✅ React <br> ❌ Next.js | [공식문서](./src/docs/components/InfiniteScroll.md) |
 
