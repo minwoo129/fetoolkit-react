@@ -11,6 +11,10 @@
       "import": "./dist/index.js"
     }
   },
+  "keywords": [
+    "react",
+    "fetoolkit"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

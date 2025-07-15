@@ -30,11 +30,12 @@ export default defineConfig({
             formats: ['es'],
           },
           rollupOptions: {
-            external: ['react'],
+            external: ['react', 'react-dom'],
             output: {
               globals: {
                 react: 'React',
               },
+              interop: 'auto',
             },
           },
           commonjsOptions: {
