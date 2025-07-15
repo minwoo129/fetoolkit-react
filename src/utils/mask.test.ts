@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { Mask } from './mask';
+import { MaskUtils } from './mask';
 
 describe('mask > maskPhoneNumber', () => {
   describe('하이픈이 없는 전화번호들에 대해 마스킹이 처리되는 경우', () => {
@@ -13,7 +13,7 @@ describe('mask > maskPhoneNumber', () => {
       { input: '01012345678', output: '010****5678' },
     ].forEach(({ input, output }) => {
       it(`input: ${input}, output: ${output}`, () => {
-        expect(Mask.maskPhoneNumber(input)).toBe(output);
+        expect(MaskUtils.maskPhoneNumber(input)).toBe(output);
       });
     });
   });
@@ -27,7 +27,7 @@ describe('mask > maskPhoneNumber', () => {
       { input: '010-1234-5678', output: '010-****-5678' },
     ].forEach(({ input, output }) => {
       it(`input: ${input}, output: ${output}`, () => {
-        expect(Mask.maskPhoneNumber(input)).toBe(output);
+        expect(MaskUtils.maskPhoneNumber(input)).toBe(output);
       });
     });
   });
@@ -35,13 +35,13 @@ describe('mask > maskPhoneNumber', () => {
 
 describe('mask > maskName', () => {
   it('이름이 두자리인 경우', () => {
-    expect(Mask.maskName('이한')).toBe('이*');
+    expect(MaskUtils.maskName('이한')).toBe('이*');
   });
   it('이름이 세자리인 경우', () => {
-    expect(Mask.maskName('홍길동')).toBe('홍*동');
-    expect(Mask.maskName('김철수')).toBe('김*수');
+    expect(MaskUtils.maskName('홍길동')).toBe('홍*동');
+    expect(MaskUtils.maskName('김철수')).toBe('김*수');
   });
   it('이름이 네자리인 경우', () => {
-    expect(Mask.maskName('남궁민수')).toBe('남**수');
+    expect(MaskUtils.maskName('남궁민수')).toBe('남**수');
   });
 });

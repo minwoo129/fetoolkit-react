@@ -53,7 +53,7 @@ const maskExceptForEdge = (text: string, edgeSize: number) => {
   );
 };
 
-export const Mask = {
+export const MaskUtils = {
   maskPhoneNumber,
   maskName,
 };

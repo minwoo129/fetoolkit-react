@@ -29,7 +29,7 @@ const decommaizeNumber = (numStr: string) => {
   return Number(numStr.replace(/,/g, ''));
 };
 
-export const Numbers = {
+export const NumbersUtils = {
   formatPhoneNumber,
   commaizeNumber,
   decommaizeNumber,
