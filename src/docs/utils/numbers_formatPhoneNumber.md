@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { Numbers } from '@fetoolkit/react/utils';
+import { Numbers } from '@fetoolkit/react';
 
 const { formatPhoneNumber } = Numbers;
 
