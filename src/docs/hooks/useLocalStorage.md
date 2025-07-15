@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useLocalStorage } from '@fetoolkit/react/hooks'
+import { useLocalStorage } from '@fetoolkit/react'
 ...
 const [get, set, remove, clear] = useLocalStorage()
 ```

@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useInput } from '@fetoolkit/react/hooks';
+import { useInput } from '@fetoolkit/react';
 
   ...
 

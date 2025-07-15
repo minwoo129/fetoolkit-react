@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
 import type { RefObject } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 type Size = {
   width: number;
@@ -13,7 +13,7 @@ type Size = {
  *    - 이 훅은 주어진 요소의 너비와 높이를 상태로 관리하며, 요소가 리사이즈될 때마다 업데이트됩니다.
  * - 사용 예시
  *    ```tsx
- *    import { useResizeElement } from '@fetoolkit/react/hooks';
+ *    import { useResizeElement } from '@fetoolkit/react';
  *    ...
  *    const elementRef = useRef<HTMLDivElement>(null);
  *    const [width, height] = useResizeElement(elementRef);

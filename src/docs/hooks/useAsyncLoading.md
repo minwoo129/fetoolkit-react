@@ -6,7 +6,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useAsyncLoading } from '@fetoolkit/react/hooks';
+import { useAsyncLoading } from '@fetoolkit/react';
 ...
 const [isLoading, startTransition] = useAsyncLoading();
 ...

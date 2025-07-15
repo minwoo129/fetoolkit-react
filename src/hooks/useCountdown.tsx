@@ -9,7 +9,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
  *   - 현재 남은시간과 카운트다운 실행 여부, 카운트다운 기능을 동작시키는 액션을 객체형태로 반환합니다.
  * - 사용 예시
  *    ```tsx
- *     import { useCountdown } from '@fetoolkit/react/hooks';
+ *     import { useCountdown } from '@fetoolkit/react';
  *     ...
  *     const { leftTime, isCountdownRunning, handleCountdown } = useCountdown({minute: 1, second: 30}); // 1분 30초로 카운트다운 시작
  *     ```

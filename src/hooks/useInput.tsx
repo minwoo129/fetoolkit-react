@@ -8,7 +8,7 @@ import { useCallback, useMemo, useState } from 'react';
  *     - 이 훅은 초기값을 받아 해당 값을 상태로 관리하며, 현재 상태값과 상태값 변경 메서드를 제공하는 튜플을 반환합니다.
  * - 사용 예시 1
  *     ```tsx
- *       import { useInput } from '@fetoolkit/react/hooks';
+ *       import { useInput } from '@fetoolkit/react';
  *
  *       ...
  *

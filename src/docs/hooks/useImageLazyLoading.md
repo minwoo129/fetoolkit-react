@@ -5,7 +5,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useImageLazyLoading } from '@fetoolkit/react/hooks';
+import { useImageLazyLoading } from '@fetoolkit/react';
  ...
  const [imgRef, realSrc] = useImageLazyLoading({ src: 'image url' });
  ...

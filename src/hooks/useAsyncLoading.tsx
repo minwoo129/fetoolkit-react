@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
  *   - Promise를 인자로 받아 로딩 상태와 Promise 결과를 반환합니다.
  * - 사용 예시
  *   ```tsx
- *    import { useAsyncLoading } from '@fetoolkit/react/hooks';
+ *    import { useAsyncLoading } from '@fetoolkit/react';
  *    ...
  *    const [isLoading, startTransition] = useAsyncLoading();
  *    ...

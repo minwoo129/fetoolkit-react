@@ -10,7 +10,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { getBrowserInfo } from '@fetoolkit/react/utils'
+import { getBrowserInfo } from '@fetoolkit/react'
 
 const getBrowserInfo = async() => {
     try {

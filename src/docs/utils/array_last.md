@@ -9,7 +9,7 @@ Array.last(array);
 ## 기본 사용 예시
 
 ```tsx
-import { Array } from '@fetoolkit/react/utils';
+import { Array } from '@fetoolkit/react';
 
 const { last } = Array;
 

@@ -6,7 +6,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useResizeWindow } from '@fetoolkit/react/hooks';
+import { useResizeWindow } from '@fetoolkit/react';
 ...
 const [width, height] = useResizeWindow();
 ```

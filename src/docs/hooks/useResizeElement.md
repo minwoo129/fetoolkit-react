@@ -6,7 +6,7 @@
 ## 기본 사용 예시
 
 ```tsx
-import { useResizeElement } from '@fetoolkit/react/hooks';
+import { useResizeElement } from '@fetoolkit/react';
 ...
 const elementRef = useRef<HTMLDivElement>(null);
 const [width, height] = useResizeElement(elementRef);

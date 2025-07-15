@@ -8,7 +8,7 @@
 ### 1. ErrorBoundary(컴포넌트)
 
 ```tsx
-import { ErrorBoundary } from '@fetoolkit/react/components';
+import { ErrorBoundary } from '@fetoolkit/react';
 
 <ErrorBoundary renderFallback={() => <div>Error</div>}>
   <App />
@@ -19,7 +19,7 @@ import { ErrorBoundary } from '@fetoolkit/react/components';
 
 ```tsx
 ...
-import { withErrorBoundary } from '@fetoolkit/react/components';
+import { withErrorBoundary } from '@fetoolkit/react';
 ...
 export default withErrorBoundary(App, {
   renderFallback: () => <div>Error</div>,

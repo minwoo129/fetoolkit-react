@@ -12,7 +12,7 @@ type Size = {
  *    - 이 훅은 브라우저 창의 너비와 높이를 상태로 관리하며, 창 크기가 변경될 때마다 업데이트됩니다.
  * - 사용 예시
  *    ```tsx
- *    import { useResizeWindow } from '@fetoolkit/react/hooks';
+ *    import { useResizeWindow } from '@fetoolkit/react';
  *    ...
  *    const [width, height] = useResizeWindow();
  *    ```
