@@ -1,7 +1,7 @@
 import { useContext, useMemo } from 'react';
 import UserAgentContexts from '../contexts/UserAgentContext';
 
-const useUserAgent = () => {
+export const useUserAgent = () => {
   const { agent } = useContext(UserAgentContexts);
 
   return useMemo(
