@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 type ScrollPosition = {
   /** 수직 스크롤 기준 현재 위치 */
@@ -74,9 +74,12 @@ export function useScroll<T extends HTMLElement>(
     }
   }, [elementRef]);
 
-  return {
-    scrollY: position.scrollY,
-    scrollX: position.scrollX,
-    scrollToTop,
-  };
+  return useMemo(
+    () => ({
+      scrollY: position.scrollY,
+      scrollX: position.scrollX,
+      scrollToTop,
+    }),
+    [position, scrollToTop],
+  );
 }
