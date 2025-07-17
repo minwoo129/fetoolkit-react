@@ -48,5 +48,5 @@ export function useImageLazyLoading({
     return loaded ? src : '';
   }, [loaded, src]);
 
-  return [imgRef, realSrc];
+  return useMemo(() => [imgRef, realSrc], [imgRef, realSrc]);
 }
