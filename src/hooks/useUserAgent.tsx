@@ -23,5 +23,3 @@ export const useUserAgent = () => {
     [agent],
   );
 };
-
-export default useUserAgent;
