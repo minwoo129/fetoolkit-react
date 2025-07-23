@@ -9,4 +9,5 @@ export { useScroll } from './useScroll';
 export { useSessionStorage } from './useSessionStorage';
 export { useToggle } from './useToggle';
 export { useUserAgent } from './useUserAgent';
+export { useValidateCheckInput } from './useValidateCheckInput';
 export { useValidationCheck } from './useValidationCheck';
