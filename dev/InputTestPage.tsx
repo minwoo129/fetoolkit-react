@@ -1,18 +1,27 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import { useValidateCheckInput } from '../src';
-import type { Validators } from './constants/validation';
+import {
+  useAppValidateCheckInput,
+  useAppValidationCheck,
+} from './hook/validation';
 
 const InputTestPage = () => {
   // const {
   //   input: [password, handlePasswordChange],
   //   validation: [passwordValidation],
   // } = useAppValidateCheckInput('', ['password_length']);
+  // const {
+  //   input: [password, handlePasswordChange],
+  //   validation: [passwordValidationStatus, setPasswordValidationStatus],
+  // } = useValidateCheckInput<typeof Validators>('', ['password_length']);
+  const { check } = useAppValidationCheck();
+
+  check('email', 'test@test.com');
   const {
-    input: [password, handlePasswordChange],
-    validation: [passwordValidationStatus, setPasswordValidationStatus],
-  } = useValidateCheckInput<typeof Validators>('', ['password_length']);
+    input: [email, handleEmailChange],
+    validation: [emailValidation, setEmailValidation],
+  } = useAppValidateCheckInput('', ['email']);
 
   // check('email', 'test@test.com');
 

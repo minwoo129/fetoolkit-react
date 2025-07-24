@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
-import {
-  useValidateCheckInput,
-  useValidationCheck,
-  type UseValidateCheckInputType,
-  type UseValidationCheckType,
-  type ValidatorType,
+import type {
+  UseValidateCheckInputType,
+  UseValidationCheckType,
+  ValidatorType,
 } from '../../src';
+import { useValidateCheckInput, useValidationCheck } from '../../src';
 import type { Validators } from '../constants/validation';
 
-export const useValidator: <
+export const useAppValidationCheck: <
   T extends ValidatorType = typeof Validators,
 >() => UseValidationCheckType<T> = useValidationCheck;
 
