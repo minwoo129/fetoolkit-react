@@ -1,40 +1,35 @@
 import { useCallback, useContext, useMemo, useState } from 'react';
 import type {
   ValidationStatusType,
-  ValidatorActionType,
   ValidatorType,
 } from '../contexts/ValidationContext';
 import ValidationContexts from '../contexts/ValidationContext';
 
-export type UseValidateCheckInputType<
-  T,
-  V extends ValidatorType<string>,
-> = ReturnType<typeof useValidateCheckInput<T, V>>;
+export type UseValidateCheckInputType<V extends ValidatorType<string>> =
+  ReturnType<typeof useValidateCheckInput<V>>;
 
-export const useValidateCheckInput = <T, V extends ValidatorType<string>>(
-  initialValue: T,
+export const useValidateCheckInput = <V extends ValidatorType<string>>(
+  initialValue: string,
   validateKeys: (keyof V)[],
 ): {
   // eslint-disable-next-line no-unused-vars
-  input: [T, (value: T) => void];
+  input: [string, (value: string) => void];
   validation: [
     ValidationStatusType,
     React.Dispatch<React.SetStateAction<ValidationStatusType>>,
   ];
 } => {
   const { appValidators } = useContext(ValidationContexts);
-  const [value, setValue] = useState<T>(initialValue);
+  const [value, setValue] = useState(initialValue);
   const [validationStatus, setValidationStatus] =
     useState<ValidationStatusType>({ isPassed: false });
 
   const handleChange = useCallback(
-    (value: T) => {
+    (value: string) => {
       setValue(value);
 
       for (const key of validateKeys) {
-        const { validator, errorStatus } = appValidators[
-          key as string
-        ] as ValidatorActionType<T>;
+        const { validator, errorStatus } = appValidators[key as string];
         const isPassed = validator(value);
         if (isPassed) {
           continue;

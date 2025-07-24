@@ -13,9 +13,8 @@ export const useValidator: <
 >() => UseValidationCheckType<T> = useValidationCheck;
 
 export const useAppValidateCheckInput: <
-  T,
   V extends ValidatorType = typeof Validators,
 >(
-  initialValue: T,
+  initialValue: string,
   validateKeys: (keyof V)[],
-) => UseValidateCheckInputType<T, V> = useValidateCheckInput;
+) => UseValidateCheckInputType<V> = useValidateCheckInput;

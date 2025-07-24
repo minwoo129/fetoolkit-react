@@ -2,6 +2,7 @@ export * from './components';
 export { FEToolkitProvider } from './contexts';
 export type {
   ValidationStatusType,
+  ValidatorActionType,
   ValidatorType,
 } from './contexts/ValidationContext';
 export * from './hooks';
