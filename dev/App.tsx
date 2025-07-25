@@ -4,6 +4,7 @@ import { ErrorBoundary } from '../src/components';
 import './App.css';
 import ErrorTestPage from './ErrorTestPage';
 import FlatlistTestPage from './FlatlistTestPage';
+import InputTestPage from './InputTestPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<ErrorTestPage />} />
           <Route path="/error-test" element={<ErrorTestPage />} />
           <Route path="/flatlist-test" element={<FlatlistTestPage />} />
+          <Route path="/input-test" element={<InputTestPage />} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>
