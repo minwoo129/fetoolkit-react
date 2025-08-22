@@ -1,5 +1,6 @@
 export * from './components';
 export { FEToolkitProvider } from './contexts';
+export { ContextMenuProvider } from './contexts/ContextMenuContext';
 export type {
   ValidationStatusType,
   ValidatorActionType,
