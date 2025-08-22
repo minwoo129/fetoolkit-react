@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useContextMenu } from '../src/hooks/useContextMenu';
+import { useContextMenu } from '../src';
 
 const ContextMenuTestPage = () => {
   const { contextMenuHandler, onClickedContextMenuItem } = useContextMenu();

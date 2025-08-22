@@ -1,4 +1,5 @@
 export { useAsyncLoading } from './useAsyncLoading';
+export { useContextMenu } from './useContextMenu';
 export { useCountdown } from './useCountdown';
 export { useImageLazyLoading } from './useImageLazyLoading';
 export { useInput } from './useInput';
