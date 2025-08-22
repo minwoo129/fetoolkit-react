@@ -39,6 +39,8 @@ export const useContextMenu = () => {
       if (lastClickedData) {
         callback(lastClickedData);
       }
+
+      return () => {};
     },
     [lastClickedData],
   );
