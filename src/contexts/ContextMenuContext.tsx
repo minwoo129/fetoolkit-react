@@ -19,11 +19,18 @@ type ContextMenuContextType = {
     elementId: string | number | null;
   }) => void;
   lastClickedData: LastClickedDataType | null;
+  locate: { x: string; y: string };
+  buttonDatas: ContextMenuItemType[];
+  // eslint-disable-next-line no-unused-vars
+  onClickedContextMenuItem: (value: string) => void;
 };
 
 const ContextMenuContext = createContext<ContextMenuContextType>({
   showContextMenu: () => {},
   lastClickedData: null,
+  locate: { x: '0', y: '0' },
+  buttonDatas: [],
+  onClickedContextMenuItem: () => {},
 });
 
 interface ContextMenuProviderProps {
@@ -77,8 +84,17 @@ export const ContextMenuProvider = ({
     () => ({
       showContextMenu,
       lastClickedData,
+      locate,
+      buttonDatas,
+      onClickedContextMenuItem,
     }),
-    [showContextMenu, lastClickedData],
+    [
+      showContextMenu,
+      lastClickedData,
+      locate,
+      buttonDatas,
+      onClickedContextMenuItem,
+    ],
   );
 
   return (
@@ -95,9 +111,7 @@ export const ContextMenuProvider = ({
                 x={locate.x}
                 y={locate.y}
                 items={buttonDatas}
-                onClick={(value) => {
-                  onClickedContextMenuItem(value);
-                }}
+                onClick={onClickedContextMenuItem}
                 testId="context-menu-default-test"
               />
             )}
