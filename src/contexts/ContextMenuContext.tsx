@@ -98,6 +98,7 @@ export const ContextMenuProvider = ({
                 onClick={(value) => {
                   onClickedContextMenuItem(value);
                 }}
+                testId="context-menu-default-test"
               />
             )}
           </div>

@@ -7,6 +7,7 @@ interface ContextMenuGridProps extends AriaAttributes {
   y: string;
   style?: CSSProperties;
   children: React.ReactNode;
+  testId?: string;
 }
 
 interface ContextMenuGridItemProps extends AriaAttributes {
@@ -21,12 +22,20 @@ export type ContextMenuItemType = {
   label: string;
 };
 
-const Grid = ({ x, y, style, children, ...rest }: ContextMenuGridProps) => {
+const Grid = ({
+  x,
+  y,
+  style,
+  children,
+  testId,
+  ...rest
+}: ContextMenuGridProps) => {
   return (
     <div
       className={`context-menu-wrapper`}
       style={{ left: `${x}px`, top: `${y}px`, ...style }}
       {...rest}
+      data-testid={testId}
     >
       <ul className="context-menu-menu">{children}</ul>
     </div>
@@ -65,6 +74,7 @@ type DefaultContextMenuProps = {
   items: ContextMenuItemType[];
   // eslint-disable-next-line no-unused-vars
   onClick: (value: string) => void;
+  testId?: string;
 };
 
 export const DefaultContextMenu = ({
@@ -72,9 +82,10 @@ export const DefaultContextMenu = ({
   y,
   items,
   onClick,
+  testId,
 }: DefaultContextMenuProps) => {
   return (
-    <ContextMenu.Grid x={x} y={y}>
+    <ContextMenu.Grid x={x} y={y} testId={testId}>
       {items.map((item) => {
         return (
           <ContextMenu.Item
