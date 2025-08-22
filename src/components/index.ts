@@ -1,4 +1,4 @@
-export { ContextMenu } from './ContextMenu';
+export { ContextMenuTest } from './ContextMenu';
 export { ErrorBoundary, withErrorBoundary } from './ErrorBoundary';
 export { Flatlist } from './Flatlist';
 export { default as InfiniteScroll } from './InfiniteScroll';

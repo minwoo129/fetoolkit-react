@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ContextMenu } from '../src';
+import React, { useMemo, useState } from 'react';
+import { ContextMenuTest } from '../src';
 
 type LocateType = {
   x: string;
@@ -9,6 +9,21 @@ const ContextMenuTestPage = () => {
   const [visible, setVisible] = useState(false);
   const [locate, setLocate] = useState<LocateType>({ x: '0', y: '0' });
 
+  const testArr = useMemo(() => {
+    return [
+      'test1',
+      'test2',
+      'test3',
+      'test4',
+      'test5',
+      'test6',
+      'test7',
+      'test8',
+      'test9',
+      'test10',
+    ];
+  }, []);
+
   const contextMenuHandler = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     const { clientX, clientY } = e;
@@ -17,8 +32,32 @@ const ContextMenuTestPage = () => {
   };
 
   return (
-    <div style={{ width: '100vw', height: '100vh', border: '1px solid red' }}>
-      <div
+    <div
+      style={{ width: '100vw', height: '100vh', border: '1px solid red' }}
+      // onContextMenu={contextMenuHandler}
+      // onClick={() => {
+      //   if (visible) {
+      //     setVisible(false);
+      //   }
+      // }}
+      onClick={() => {
+        if (visible) {
+          setVisible(false);
+        }
+      }}
+    >
+      {testArr.map((item, idx) => {
+        return (
+          <div
+            key={idx}
+            style={{ width: '100%', border: '1px solid blue' }}
+            onContextMenu={contextMenuHandler}
+          >
+            {item}
+          </div>
+        );
+      })}
+      {/* <div
         style={{
           width: '100%',
           height: '100%',
@@ -30,7 +69,7 @@ const ContextMenuTestPage = () => {
             setVisible(false);
           }
         }}
-      />
+      /> */}
       {visible && (
         <div
           style={{
@@ -46,7 +85,7 @@ const ContextMenuTestPage = () => {
           }}
           onClick={() => setVisible(!visible)}
         >
-          <ContextMenu x={locate.x} y={locate.y} />
+          <ContextMenuTest x={locate.x} y={locate.y} />
         </div>
       )}
     </div>
