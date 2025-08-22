@@ -2,32 +2,6 @@ import type { AriaAttributes, CSSProperties } from 'react';
 import React from 'react';
 import '../css/ContextMenu.css';
 
-interface ContextMenuTestProps {
-  x: string;
-  y: string;
-}
-
-export const ContextMenuTest = ({ x, y }: ContextMenuTestProps) => {
-  return (
-    <div
-      className="context-menu-wrapper"
-      style={{ left: `${x}px`, top: `${y}px` }}
-    >
-      <ul className="context-menu-menu">
-        <li className="context-menu-item" value={'reply'}>
-          <span className="context-menu-span">reply</span>
-        </li>
-        <li className="context-menu-item" value={'share'}>
-          <span className="context-menu-span">share</span>
-        </li>
-        <li className="context-menu-item" value={'delete'}>
-          <span className="context-menu-span">delete</span>
-        </li>
-      </ul>
-    </div>
-  );
-};
-
 interface ContextMenuGridProps extends AriaAttributes {
   x: string;
   y: string;
