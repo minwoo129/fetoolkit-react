@@ -1,12 +1,22 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useContextMenu } from '../src';
 
 const ContextMenuTestPage = () => {
   const { contextMenuHandler, onClickedContextMenuItem } = useContextMenu();
+  const [data, setData] = useState<{
+    elementId: string | number | null;
+    value: string;
+  } | null>(null);
 
-  onClickedContextMenuItem((data) => {
-    console.log('clickedData: ', data);
-  });
+  useEffect(() => {
+    const unsubscribe = onClickedContextMenuItem((data) => {
+      console.log('clickedData: ', data);
+      setData(data);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, [onClickedContextMenuItem]);
   const testArr = useMemo(() => {
     return [
       'test1',
@@ -58,6 +68,7 @@ const ContextMenuTestPage = () => {
           </div>
         );
       })}
+      {data && <h1 data-testid="data-result-test">{JSON.stringify(data)}</h1>}
       {/* {visible && (
         <div
           style={{
