@@ -1,14 +1,12 @@
-import React, { useMemo, useState } from 'react';
-import { ContextMenuTest } from '../src';
+import React, { useMemo } from 'react';
+import { useContextMenu } from '../src/hooks/useContextMenu';
 
-type LocateType = {
-  x: string;
-  y: string;
-};
 const ContextMenuTestPage = () => {
-  const [visible, setVisible] = useState(false);
-  const [locate, setLocate] = useState<LocateType>({ x: '0', y: '0' });
+  const { contextMenuHandler, onClickedContextMenuItem } = useContextMenu();
 
+  onClickedContextMenuItem((data) => {
+    console.log('clickedData: ', data);
+  });
   const testArr = useMemo(() => {
     return [
       'test1',
@@ -24,53 +22,43 @@ const ContextMenuTestPage = () => {
     ];
   }, []);
 
-  const contextMenuHandler = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    const { clientX, clientY } = e;
-    setVisible((pre) => !pre);
-    setLocate({ x: clientX.toString(), y: clientY.toString() });
-  };
-
   return (
-    <div
-      style={{ width: '100vw', height: '100vh', border: '1px solid red' }}
-      // onContextMenu={contextMenuHandler}
-      // onClick={() => {
-      //   if (visible) {
-      //     setVisible(false);
-      //   }
-      // }}
-      onClick={() => {
-        if (visible) {
-          setVisible(false);
-        }
-      }}
-    >
+    <div style={{ width: '100vw', height: '100vh', border: '1px solid red' }}>
       {testArr.map((item, idx) => {
         return (
           <div
             key={idx}
             style={{ width: '100%', border: '1px solid blue' }}
-            onContextMenu={contextMenuHandler}
+            onContextMenu={(e) => {
+              contextMenuHandler({
+                elementId: 'test-124',
+                buttonDatas: [
+                  {
+                    label: 'test',
+                    value: 'test',
+                  },
+                  {
+                    label: 'test1',
+                    value: 'test1',
+                  },
+                  {
+                    label: 'test2',
+                    value: 'test2',
+                  },
+                  {
+                    label: 'test3',
+                    value: 'test3',
+                  },
+                ],
+                e,
+              });
+            }}
           >
             {item}
           </div>
         );
       })}
-      {/* <div
-        style={{
-          width: '100%',
-          height: '100%',
-          border: '1px solid blue',
-        }}
-        onContextMenu={contextMenuHandler}
-        onClick={() => {
-          if (visible) {
-            setVisible(false);
-          }
-        }}
-      /> */}
-      {visible && (
+      {/* {visible && (
         <div
           style={{
             position: 'fixed',
@@ -87,7 +75,7 @@ const ContextMenuTestPage = () => {
         >
           <ContextMenuTest x={locate.x} y={locate.y} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
