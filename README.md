@@ -75,7 +75,7 @@ createRoot(document.getElementById('root')!).render(
 | useValidationCheck    | 유효성 검사를 위한 hook 입니다.                                                              | [공식문서](./src/docs/joinedFeatures/validationCheck.md) |
 | useValidateCheckInput | 입력값 상태관리와 유효성 검사기능이 결합된 hook입니다.                                       | [공식문서](./src/docs/joinedFeatures/validationCheck.md) |
 | useContextMenu        | ContextMenu 기능 실행을 위한 hook 입니다.                                                    |      [공식문서](./src/docs/hooks/useContextMenu.md)      |
-| useCustomContextMenu  | 사용자 선언형 ContextMenu 컴포넌트 구현시 필요한 <br> 값들을 반환하는 hook 입니다.           |                         공식문서                         |
+| useCustomContextMenu  | 사용자 선언형 ContextMenu 컴포넌트 구현시 필요한 <br> 값들을 반환하는 hook 입니다.           |   [공식문서](./src/docs/hooks/useCustomContextMenu.md)   |
 
 ### 3-3. 유틸리티 함수
 
