@@ -55,6 +55,7 @@ createRoot(document.getElementById('root')!).render(
 | ErrorBoundary  | React 기본 탑재 기능인 ErrorBoundary를 함수 컴포넌트 및<br> HOC 형태로 제공하는 컴포넌트                                                          | [공식문서](./src/docs/components/ErrorBoundary.md)  |
 | Flatlist       | 많은 양의 스크롤이 필요한 리스트 아이템을 보여주고자 할 때<br> 사용할 수 있는 컴포넌트 <br> (참고: React Native 개발자라면 이해할 수 있을겁니다!) |    [공식문서](./src/docs/components/Flatlist.md)    |
 | InfiniteScroll | 무한 스크롤 기능 컴포넌트                                                                                                                         | [공식문서](./src/docs/components/InfiniteScroll.md) |
+| ContextMenu    | 사용자 선언 ContextMenu 구현을 위한 컴포넌트                                                                                                      |                      공식문서                       |
 
 ### 3-2. Hook
 
@@ -73,6 +74,8 @@ createRoot(document.getElementById('root')!).render(
 | useUserAgent          | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 Hook |       [공식문서](./src/docs/hooks/useUserAgent.md)       |
 | useValidationCheck    | 유효성 검사를 위한 hook 입니다.                                                              | [공식문서](./src/docs/joinedFeatures/validationCheck.md) |
 | useValidateCheckInput | 입력값 상태관리와 유효성 검사기능이 결합된 hook입니다.                                       | [공식문서](./src/docs/joinedFeatures/validationCheck.md) |
+| useContextMenu        | ContextMenu 기능 실행을 위한 hook 입니다.                                                    |      [공식문서](./src/docs/hooks/useContextMenu.md)      |
+| useCustomContextMenu  | 사용자 선언형 ContextMenu 컴포넌트 구현시 필요한 <br> 값들을 반환하는 hook 입니다.           |                         공식문서                         |
 
 ### 3-3. 유틸리티 함수
 
