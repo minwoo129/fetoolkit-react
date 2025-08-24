@@ -5,6 +5,7 @@ import '../css/ContextMenu.css';
 interface ContextMenuGridProps extends AriaAttributes {
   x: string;
   y: string;
+  className?: string;
   style?: CSSProperties;
   children: React.ReactNode;
   testId?: string;
@@ -14,6 +15,11 @@ interface ContextMenuGridItemProps extends AriaAttributes {
   value: string;
   label: string;
   style?: CSSProperties;
+  className?: string;
+  textStyle?: {
+    className?: string;
+    style?: CSSProperties;
+  };
   onClick?: () => void;
 }
 
@@ -28,11 +34,12 @@ const Grid = ({
   style,
   children,
   testId,
+  className,
   ...rest
 }: ContextMenuGridProps) => {
   return (
     <div
-      className={`context-menu-wrapper`}
+      className={`context-menu-wrapper ${className}`}
       style={{ left: `${x}px`, top: `${y}px`, ...style }}
       {...rest}
       data-testid={testId}
@@ -47,17 +54,24 @@ const Item = ({
   label,
   style,
   onClick,
+  className,
+  textStyle,
   ...rest
 }: ContextMenuGridItemProps) => {
   return (
     <li
-      className={`context-menu-item`}
+      className={`context-menu-item ${className}`}
       value={value}
       style={style}
       onClick={onClick}
       {...rest}
     >
-      <span className="context-menu-span">{label}</span>
+      <span
+        className={`context-menu-span ${textStyle?.className ?? ''}`}
+        style={textStyle?.style}
+      >
+        {label}
+      </span>
     </li>
   );
 };
