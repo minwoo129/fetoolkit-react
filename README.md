@@ -50,12 +50,12 @@ createRoot(document.getElementById('root')!).render(
 
 ### 3-1. 컴포넌트
 
-| 이름           | 설명                                                                                                                                              |                      공식문서                       |
-| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------: |
-| ErrorBoundary  | React 기본 탑재 기능인 ErrorBoundary를 함수 컴포넌트 및<br> HOC 형태로 제공하는 컴포넌트                                                          | [공식문서](./src/docs/components/ErrorBoundary.md)  |
-| Flatlist       | 많은 양의 스크롤이 필요한 리스트 아이템을 보여주고자 할 때<br> 사용할 수 있는 컴포넌트 <br> (참고: React Native 개발자라면 이해할 수 있을겁니다!) |    [공식문서](./src/docs/components/Flatlist.md)    |
-| InfiniteScroll | 무한 스크롤 기능 컴포넌트                                                                                                                         | [공식문서](./src/docs/components/InfiniteScroll.md) |
-| ContextMenu    | 사용자 선언 ContextMenu 구현을 위한 컴포넌트                                                                                                      |                      공식문서                       |
+| 이름           | 설명                                                                                                                                              |                       공식문서                       |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------: |
+| ErrorBoundary  | React 기본 탑재 기능인 ErrorBoundary를 함수 컴포넌트 및<br> HOC 형태로 제공하는 컴포넌트                                                          |  [공식문서](./src/docs/components/ErrorBoundary.md)  |
+| Flatlist       | 많은 양의 스크롤이 필요한 리스트 아이템을 보여주고자 할 때<br> 사용할 수 있는 컴포넌트 <br> (참고: React Native 개발자라면 이해할 수 있을겁니다!) |    [공식문서](./src/docs/components/Flatlist.md)     |
+| InfiniteScroll | 무한 스크롤 기능 컴포넌트                                                                                                                         | [공식문서](./src/docs/components/InfiniteScroll.md)  |
+| ContextMenu    | 사용자 선언 ContextMenu 구현을 위한 컴포넌트                                                                                                      | [공식문서](./src/docs/joinedFeatures/contextMenu.md) |
 
 ### 3-2. Hook
 

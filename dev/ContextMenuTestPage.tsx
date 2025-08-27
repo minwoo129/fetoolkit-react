@@ -42,6 +42,7 @@ const ContextMenuTestPage = () => {
             onContextMenu={(e) => {
               contextMenuHandler({
                 elementId: 'test-124',
+                event: e,
                 buttonDatas: [
                   {
                     label: 'test',
@@ -60,7 +61,6 @@ const ContextMenuTestPage = () => {
                     value: 'test3',
                   },
                 ],
-                e,
               });
             }}
           >
