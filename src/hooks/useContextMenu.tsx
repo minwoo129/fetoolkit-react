@@ -5,7 +5,7 @@ import ContextMenuContext from '../contexts/ContextMenuContext';
 type ContextMenuHandlerArgs<T extends HTMLElement> = {
   elementId: string | number | null;
   buttonDatas: ContextMenuItemType[];
-  e: React.MouseEvent<T, MouseEvent>;
+  event: React.MouseEvent<T, MouseEvent>;
 };
 
 export const useContextMenu = () => {
@@ -18,9 +18,9 @@ export const useContextMenu = () => {
 
   const contextMenuHandler = useCallback(
     <T extends HTMLElement>(args: ContextMenuHandlerArgs<T>) => {
-      const { elementId, buttonDatas, e } = args;
-      e.preventDefault();
-      const { clientX, clientY } = e;
+      const { elementId, buttonDatas, event } = args;
+      event.preventDefault();
+      const { clientX, clientY } = event;
       showContextMenu({
         elementId,
         buttonDatas,
