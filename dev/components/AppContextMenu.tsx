@@ -6,7 +6,12 @@ const AppContextMenu = () => {
   const { buttonDatas, locate, onClickedContextMenuItem } =
     useCustomContextMenu();
   return (
-    <ContextMenu.Grid x={locate.x} y={locate.y} className="context-menu">
+    <ContextMenu.Grid
+      x={locate.x}
+      y={locate.y}
+      className="context-menu"
+      testId="context-menu-custom-test"
+    >
       {buttonDatas.map((item) => {
         return (
           <ContextMenu.Item

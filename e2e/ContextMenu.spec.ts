@@ -5,7 +5,7 @@ test('ContextMenu 실행 테스트', async ({ page }) => {
   await page.getByText('test7').click({
     button: 'right',
   });
-  await expect(page.getByTestId('context-menu-default-test')).toBeVisible();
+  await expect(page.getByTestId('context-menu-custom-test')).toBeVisible();
 });
 
 test('ContextMenu 아이템 클릭 테스트', async ({ page }) => {
