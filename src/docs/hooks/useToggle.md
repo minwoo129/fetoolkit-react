@@ -11,14 +11,21 @@ import { useToggle } from '@fetoolkit/react';
  const [isActive2, toggleActive2] = useToggle(a === b); // 초기값이 지정된 경우
 ```
 
-## API 문서
+## API 설명
 
-- 입력 인자: boolean(default: false)
-- 반환 타입: 튜플
-  ```typescript
-  [ value: boolean, handleValueChange: function ]
-  ```
-  | Name              | Type                     | Description        |
-  | ----------------- | ------------------------ | ------------------ |
-  | value             | boolean                  | 현재 입력값        |
-  | handleToggleValue | (value: boolean) => void | 입력값 변경 메서드 |
+### Input(boolean)
+
+| Name         | Type    | Required | default | Description     |
+| :----------- | :------ | :------- | :------ | :-------------- |
+| initialValue | boolean | false    | false   | 초기 boolean 값 |
+
+### Output(튜플)
+
+```typescript
+[value: boolean, handleValueChange: (value: boolean) => void]
+```
+
+| Name              | Type                     | Description        |
+| ----------------- | ------------------------ | ------------------ |
+| value             | boolean                  | 현재 입력값        |
+| handleToggleValue | (value: boolean) => void | 입력값 변경 메서드 |

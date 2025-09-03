@@ -37,18 +37,39 @@ const AppContextMenu = () => {
 }
 ```
 
-## API 문서
+## API 설명
 
-- 입력 인자: 없음
-- 반환 타입: Object
-  | Name | Type | Description |
-  |:---|:---|:---|
-  |buttonDatas | ContextMenuItemType[] | ContextMenu에 들어갈 버튼 정보 |
-  | locate | { x: string, y: string } | ContextMenu가 띄워질 위치 |
-  | onClickedContextMenuItem | (value: string) => void | ContextMenu 내 버튼 클릭 이벤트 핸들러 메서드 |
-- 기타 타입 설명
-  | Name | Type | Description |
-  | :----- | :----- | :---------- |
-  | ContextMenuItemType |||
-  | value | string | 버튼의 고유 key값 |
-  | label | string | 버튼에서 보여질 실제 라벨값 |
+### Input(없음)
+
+이 Hook은 매개변수를 받지 않습니다.
+
+### Output(객체)
+
+```typescript
+{
+  buttonDatas: ContextMenuItemType[];
+  locate: { x: string; y: string };
+  onClickedContextMenuItem: (value: string) => void;
+}
+```
+
+| Name                     | Type                     | Description                                   |
+| :----------------------- | :----------------------- | :-------------------------------------------- |
+| buttonDatas              | ContextMenuItemType[]    | ContextMenu에 들어갈 버튼 정보                |
+| locate                   | { x: string, y: string } | ContextMenu가 띄워질 위치                     |
+| onClickedContextMenuItem | (value: string) => void  | ContextMenu 내 버튼 클릭 이벤트 핸들러 메서드 |
+
+### 기타 타입 설명
+
+```typescript
+interface ContextMenuItemType {
+  value: string;
+  label: string;
+}
+```
+
+| Name                | Type      | Description                 |
+| :------------------ | :-------- | :-------------------------- |
+| ContextMenuItemType | interface | ContextMenu 아이템의 타입   |
+| value               | string    | 버튼의 고유 key값           |
+| label               | string    | 버튼에서 보여질 실제 라벨값 |

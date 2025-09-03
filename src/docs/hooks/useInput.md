@@ -13,14 +13,23 @@ import { useInput } from '@fetoolkit/react';
   const [age, handleChangeAge] = useInput<number>(0); // 타입을 명시적으로 지정한 경우입니다.
 ```
 
-## API 문서
+## API 설명
 
-- 입력 인자: T(제네릭 타입이란 뜻으로, 이 타입에 맞는 리터럴 값을 적용해주면 됩니다.)
-- 반환 타입: 튜플
-  ```typescript
-  [ value: T, handleValueChange: function ]
-  ```
-  | Name              | Type               | Description                   |
-  | ----------------- | ------------------ | ----------------------------- |
-  | value             | T                  | 현재 입력 후 저장된 값        |
-  | handleValueChange | (value: T) => void | 입력값을 저장하기 위한 메서드 |
+### Input(T)
+
+제네릭 타입 T에 맞는 초기값을 전달합니다.
+
+| Name         | Type | Required | Description |
+| :----------- | :--- | :------- | :---------- |
+| initialValue | T    | true     | 초기값      |
+
+### Output(튜플)
+
+```typescript
+[value: T, handleValueChange: (value: T) => void]
+```
+
+| Name              | Type               | Description                   |
+| ----------------- | ------------------ | ----------------------------- |
+| value             | T                  | 현재 입력 후 저장된 값        |
+| handleValueChange | (value: T) => void | 입력값을 저장하기 위한 메서드 |

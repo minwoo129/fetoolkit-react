@@ -11,13 +11,19 @@ import { useResizeWindow } from '@fetoolkit/react';
 const [width, height] = useResizeWindow();
 ```
 
-## API 문서
+## API 설명
 
-- 반환 타입: 튜플
-  ```typescript
-  [width: number, height: number]
-  ```
-  | Name   | Type   | Description      |
-  | ------ | ------ | ---------------- |
-  | width  | number | 브라우저 창 너비 |
-  | height | number | 브라우저 창 높이 |
+### Input(없음)
+
+이 Hook은 매개변수를 받지 않습니다.
+
+### Output(튜플)
+
+```typescript
+[width: number, height: number]
+```
+
+| Name   | Type   | Description      |
+| ------ | ------ | ---------------- |
+| width  | number | 브라우저 창 너비 |
+| height | number | 브라우저 창 높이 |

@@ -12,17 +12,25 @@ const elementRef = useRef<HTMLDivElement>(null);
 const [width, height] = useResizeElement(elementRef);
 ```
 
-## API 문서
+## API 설명
 
-- 입력 인자: Ref(리터럴 값)
-  ```typescript
-  RefObject<HTMLElement | null>;
-  ```
-- 반환 타입: 튜플
-  ```typescript
-  [width: number, height: number]
-  ```
-  | Name   | Type   | Description |
-  | ------ | ------ | ----------- |
-  | width  | number | 영역의 너비 |
-  | height | number | 영역의 높이 |
+### Input(Ref)
+
+```typescript
+RefObject<HTMLElement | null>;
+```
+
+| Name       | Type                           | Required | Description                   |
+| :--------- | :----------------------------- | :------- | :---------------------------- |
+| elementRef | RefObject<HTMLElement \| null> | true     | 크기를 추적할 HTML 요소의 ref |
+
+### Output(튜플)
+
+```typescript
+[width: number, height: number]
+```
+
+| Name   | Type   | Description |
+| ------ | ------ | ----------- |
+| width  | number | 영역의 너비 |
+| height | number | 영역의 높이 |

@@ -20,13 +20,19 @@ const fetchData = async () => {
 };
 ```
 
-## API 문서
+## API 설명
 
-- 반환 타입: 튜플
-  ```typescript
-  [isLoading: boolean, startTransition: function]
-  ```
-  | Name            | Type                            | Description                                                                                                                      |
-  | --------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-  | isLoading       | boolean                         | startTransition으로 감싼 비동기 함수의 로딩 상태 <br> - 요청이 시작되면 `true`로 변경되고, 요청이 완료되면 `false`로 변경됩니다. |
-  | startTransition | (req: Promise<T>) => Promise<T> | 로딩 처리를 위한 비동기 함수를 감싸는 메서드                                                                                     |
+### Input(없음)
+
+이 Hook은 매개변수를 받지 않습니다.
+
+### Output(튜플)
+
+```typescript
+[isLoading: boolean, startTransition:function]
+```
+
+| Name            | Type                                | Description                                                                                                                      |
+| --------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| isLoading       | boolean                             | startTransition으로 감싼 비동기 함수의 로딩 상태 <br> - 요청이 시작되면 `true`로 변경되고, 요청이 완료되면 `false`로 변경됩니다. |
+| startTransition | (req: Promise\<T\>) => Promise\<T\> | 로딩 처리를 위한 비동기 함수를 감싸는 메서드                                                                                     |
