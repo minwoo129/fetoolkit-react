@@ -52,8 +52,8 @@ alwaysApply: false
       - Table Column Info
         - Name
         - Type
-        - argument type
-          - If the argument depends on the generic type, indicate it as generic type
+          - argument type
+            - If the argument depends on the generic type, indicate it as generic type
         - Required(Mandatory Specification)
         - Description(One line of brief Description, write by korean)
     - output
